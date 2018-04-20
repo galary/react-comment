@@ -1,19 +1,28 @@
-body {
+*{
     margin: 0;
     padding: 0;
+}
+body {
     font-family: sans-serif;
     background-color: #f1f1f1;
 }
-
-.content {
-    width: 500px;
+.content,.content-mobx {
+    width: 450px;
     margin: 20px auto 0px;
     font-size: 14px;
     background-color: #fff;
     border: 1px solid #f1f1f1;
-    padding: 50px;
+    padding:20px 50px 50px;
 }
-
+.outerView{
+    display: flex;
+    margin: 0 auto;
+    /*display: inline-block;*/
+    /*float: left;*/
+   /*display: -webkit-flex;
+    display: flex;
+    justify-content: space-around;*/
+}
 body {
     margin: 0;
     padding: 0;
@@ -38,6 +47,7 @@ body {
     border: 1px solid #f1f1f1;
     padding: 20px;
     margin-bottom: 10px;
+    margin-top: 15px;
 }
 
 .comment-field {
@@ -102,8 +112,15 @@ body {
 
 
 /* 评论组件样式 */
-
-.comment {
+.comment{
+    position: relative;
+    display: flex;
+    border-bottom: 1px solid #f1f1f1;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    min-height: 50px;
+}
+.comment-mobx{
     position: relative;
     display: flex;
     border-bottom: 1px solid #f1f1f1;
@@ -115,7 +132,9 @@ body {
 .comment .comment-user {
     flex-shrink: 0;
 }
-
+.comment-mobx .comment-user{
+    flex-shrink: 0;
+}
 .comment-user {
     color: #00a3cf;
     font-style: italic;
@@ -134,7 +153,9 @@ body {
 .comment:hover .comment-delete {
     color: #00a3cf;
 }
-
+.comment-mobx:hover .comment-delete {
+    color: #00a3cf;
+}
 .comment-delete {
     position: absolute;
     right: 0;
@@ -144,7 +165,7 @@ body {
     cursor: pointer;
 }
 
-.comment p {
+.comment p,.comment-mobx p {
     margin: 0;
     width: 75%;
     /*text-indent: 2em;*/

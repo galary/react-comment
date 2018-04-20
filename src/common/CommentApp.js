@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import CommentInput from './CommentInput'
 import CommentList from './CommentList'
+import { Tag  } from 'element-react';
+
 // import PropTypes from 'prop-types'
 class CommentApp extends Component {
     constructor() {
@@ -48,6 +50,7 @@ class CommentApp extends Component {
     render() {
         return (
             <div className="content">
+                 <Tag type="gray">普通模式</Tag>
                 <CommentInput onSubmit={this.handleSubmitComment.bind(this)} />
                 <CommentList comments={this.state.comments} onDeleteComment={this.handleDeleteComment.bind(this)} />
             </div>
